@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WolfSHOP</title>
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Estilos personalizados -->
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: transparent;
+    }
+
+    /* Fondo completamente transparente */
+    .parallax-container {
+      height: auto;
+      min-height: 100vh;
+      background-color: transparent;
+      position: relative;
+    }
+
+    /* Asegurar que el parallax ocupe toda la pantalla */
+    .parallax {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .parallax img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Contenedor de cards con fondo transparente */
+    .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+      background-color: transparent;
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+    }
+
+    /* Cards con fondo semi-transparente */
+    .card {
+      width: 250px;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.15); /* Más transparente */
+      backdrop-filter: blur(5px); /* Efecto de vidrio esmerilado */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s; 
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      background-color: transparent;
+    }
+
+    .card-title, .card-content p {
+      color: white !important;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      width: 100%;
+    }
+    /* Footer siempre visible */
+    footer.page-footer {
+      background-color: rgba(0, 0, 0, 0.7);
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Navbar con transparencia */
+    nav {
+      background-color: rgba(0, 0, 0, 0.7) !important;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Ajustes para el texto en cards */
+    .card-reveal {
+      background-color: rgba(0, 0, 0, 0.8);
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navegación -->
+  <nav>
+    <ul id="slide-out" class="sidenav black">
+      <li>
+        <a href="#user"><img src="giphy.gif" width="50" height="50"></a>
+        <a href="#name"><span class="white-text name">WolfSHOP</span></a>
+        <a href="#email"><span class="white-text email">WOLVESSHOP@gmail.com</span></a>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><img src="giphy.gif" width="70" height="70"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="badges.html">redes sociales</a></li>
+        <li><a href="https://youtube.com/@fuckstar1271?si=cMmj1gVv6dMw67-4"><img src="Youtube.png" width="50" height="50"></a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Contenido principal con parallax de fondo -->
+  <div class="parallax-container">
+    <div class="parallax"><img src="teff..gif" alt="Fondo Parallax"></div>
+    <div class="overlay-text">FVCK STAR
+      <div>Ultimos lanzamientos</div>
+    </div>
+   
+    
+    <!-- CARDS sobre la imagen -->
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="otrodia.jfif" alt="Imagen 1">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Music<i class="material-icons right">more_vert</i></span>
+          <p><a href="https://youtu.be/ZeuFpqbA7Xk?si=oJxJjjUxHqKGDuyp">Otro día más</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">TECTRO FT RULO <i class="material-icons right">close</i></span>
+          <p>
+            Cancion producida en FVCK STAR Record
+            Prod.Raul Hernandez
+            Escrita.TECTRO,RULO 
+
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="rich.jpg" alt="Imagen 2">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Music<i class="material-icons right">more_vert</i></span>
+          <p><a href="https://youtu.be/mim13YfWkjo?si=9Ruyd8eDvUzBz-6t">Pa' volverme rich</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">T-BLACK FT RULO <i class="material-icons right">close</i></span>
+          <p>
+            Cancion producida en FVCK STAR Record
+            Prod.Raul Hernandez
+            Escrita.T-BLACK,RULO 
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="corleone.jpg" alt="Imagen 2">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Music<i class="material-icons right">more_vert</i></span>
+          <p><a href="https://youtu.be/RcwHxbU3wAw?si=M90YQTEokL5sXp8R">Corleone</a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">TECTRO  FT RULO X LILRAVEN<i class="material-icons right">close</i></span>
+          <p>
+            Cancion producida en FVCK STAR Record
+            Prod.Raul Hernandez
+            Escrita.TECTRO,RULO,LILRAVEN 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="page-footer">
+    <div class="container center-align" style="font-size: 13px;">
+      <div style="margin-bottom: 10px;">
+        <a href="https://www.instagram.com/lilraven_mx?igsh=bzFzZDA1Ym92OWQ3">
+          <img src="instagram.png" alt="Instagram" width="24" style="margin: 0 8px;" />
+        </a>
+        <a href="https://maps.app.goo.gl/tuEnlaceAqui">
+          <img src="map.png" alt="Ubicación" width="24" style="margin: 0 8px;" />
+        </a>
+      </div>
+      <div class="grey-text text-lighten-1">
+        &copy; 2025 FVCK STAR — LilRaven MX
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elemsSidenav = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elemsSidenav);
+      var elemsParallax = document.querySelectorAll('.parallax');
+      M.Parallax.init(elemsParallax, {responsiveThreshold: 0});
+    });
+  </script>
+</body>
+</html>

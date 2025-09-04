@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Document</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+ 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body > .parallax-container {
+      flex: 1;
+    }
+
+    footer.page-footer {
+      flex-shrink: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .parallax video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .parallax-container {
+      position: relative;
+    }
+
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+      z-index: 10;
+      font-family: 'Arial', sans-serif;
+    }
+
+    footer .row {
+      margin-bottom: 5px;
+    }
+
+    footer .col {
+      margin-bottom: 0;
+    }
+
+    footer .container {
+      padding: 0 10px;
+    }
+
+   
+    .center-link {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+ 
+  <nav>
+    <ul id="slide-out" class="sidenav black">
+      <li>
+        <a href="#user"><img src="giphy.gif" width="50" height="50"></a>
+        <a href="#name"><span class="white-text name">Julio Hernandez</span></a>
+        <a href="#email"><span class="white-text email">juli122008her@gmail.com</span></a>
+      </li>
+      <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+      <li><a href="#!">Second Link</a></li>
+      <li><div class="divider"></div></li>
+      <li><a class="subheader">Subheader</a></li>
+      <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+    </ul>
+    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    <div class="nav-wrapper black">
+      
+      <a href="#" class="brand-logo"><img src="giphy.gif" width="70" height="70"></a>
+      
+     
+      <a href="center" class="center-link">Perfil Personal</a>
+
+   
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="badges.html">redes sociales</a></li>
+        <li><a href="https://youtube.com/@fuckstar1271?si=cMmj1gVv6dMw67-4"><img src="Youtube.png" width="50" height="50"></a></li>
+      </ul>
+    </div>
+  </nav>
+
+ 
+  <div class="parallax-container">
+    <div class="parallax">
+      <video autoplay loop muted playsinline>
+        <source src="Ciudad de México de Noche desde la Torre Latinoamericana - David Arcos (1080p, h264).mp4" type="video/mp4" />
+        <source src="Ciudad de México de Noche desde la Torre Latinoamericana - David Arcos (1080p, h264).webm" type="video/webm" />
+      </video>
+    </div>
+    <div class="overlay-text">
+      <h1>Julio Cesar Hernandez Tapia</h1>
+      <a href="principal.html" class="white-text"><p>Soy un estudiante especializado en programacion orientada a obejtos,desarrollo de paginas web,unos de los trabajos que he realizado a sido para promocionar la musica que mi hermano ha realizado el cual se lo dejare a continuacion dandole clik a este texto</p></a>
+    </div>
+  </div>
+
+
+  <footer class="page-footer black">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <p class="grey-text text-lighten-4" style="margin: 0;">
+            esta pagina esta hecha con fines eduactivos,presentando una breve presetancion de mi persona y a grandes rasgos mi perfil educativo presentando miw conocimientos hasta ahora 
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h6 class="white-text" style="margin-top: 0;">COMUNICACIÓN</h6>
+          <ul style="margin: 0;">
+            <li style="display: inline-block; margin-right: 10px;">
+              <a href="https://www.instagram.com/lilraven_mx?igsh=bzFzZDA1Ym92OWQ3">
+                <img src="instagram.png" width="30" alt="Instagram" />
+              </a>
+            </li>
+            <li style="display: inline-block;">
+              <a href="https://maps.app.goo.gl/tuEnlaceAqui">
+                <img src="map.png" width="30" alt="Ubicación" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container" style="font-size: 13px;">
+        © 2025 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">Lilraven</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elemsSidenav = document.querySelectorAll('.sidenav');
+      M.Sidenav.init(elemsSidenav);
+      var elemsParallax = document.querySelectorAll('.parallax');
+      M.Parallax.init(elemsParallax);
+    });
+  </script>
+</body>
+</html>
